@@ -41,3 +41,60 @@ Diferente de sistemas baseados em correspondência estrita de palavras-chave, es
 ├── Chat inteligente.py      # Código-fonte principal com a base de conhecimento e interface gráfica[cite: 26]
 ├── icon.ico                 # Ícone da janela do assistente (opcional)[cite: 26]
 └── README.md                # Documentação do projeto
+
+Como Executar o Projeto
+Pré-requisitos
+Python 3.8 ou superior instalado.
+
+Instalação da biblioteca scikit-learn.
+
+Passo a Passo
+Clone o repositório:
+
+Bash
+
+
+git clone [https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO.git](https://github.com/SEU-USUARIO/NOME-DO-REPOSITORIO.git)
+cd NOME-DO-REPOSITORIO
+Crie e ative um ambiente virtual (recomendado):
+
+Bash
+
+
+# Windows
+python -m venv venv
+venv\Scripts\activate
+
+# Linux / macOS
+python3 -m venv venv
+source venv/bin/activate
+Instale as dependências:
+
+Bash
+
+
+pip install scikit-learn
+Inicie o assistente:
+
+Bash
+
+
+python "Chat inteligente.py"
+💡 Como Funciona o Processamento de Texto
+Plaintext
+
+
+[Dúvida digitada pelo Usuário]
+              │
+              ▼
+    [Vetorização TF-IDF]
+              │
+              ▼
+[Similaridade do Cosseno vs. Base]
+              │
+    ┌─────────┴─────────┐
+    ▼                   ▼
+Score >= 0.5        Score < 0.5
+    │                   │
+Exibe resposta      Recomenda suporte humano
+do assistente       via e-mail
